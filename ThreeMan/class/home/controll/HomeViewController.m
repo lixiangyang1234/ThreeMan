@@ -90,7 +90,7 @@ static NSString * const reuseIdentifier = @"Cell";
         
         UIButton *courseButtTitle =[UIButton buttonWithType:UIButtonTypeCustom];
         
-        courseButtTitle.frame =CGRectMake(26+c%4*(courseImage.frame.size.width+betweenW), courseImage.frame.origin.y+45+c/4, 70, 30);
+        courseButtTitle.frame =CGRectMake(18+c%4*(courseImage.frame.size.width+betweenW), courseImage.frame.origin.y+30+c/4, 70, 30);
         [self.backScrollView addSubview:courseButtTitle];
         [courseButtTitle setTitle:self.noticeArray[c] forState:UIControlStateNormal];
         [courseButtTitle setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -100,11 +100,12 @@ static NSString * const reuseIdentifier = @"Cell";
         
         
         UIButton *courseBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-        courseBtn.frame =CGRectMake(courseBorderW+c%4*(courseButtTitle.frame.size.width+15), courseImage.frame.origin.y+c/4, 50,70);
+        courseBtn.frame =CGRectMake(30+c%4*(courseButtTitle.frame.size.width), courseImage.frame.origin.y+c/4, 50,60);
         [courseBtn setTitle:self.noticeArray[c] forState:UIControlStateNormal  ];
         [courseBtn setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
         [_backScrollView addSubview:courseBtn];
         courseBtn.backgroundColor =[UIColor clearColor];
+        courseBtn.alpha =.4;
 //        CategoryButt.tag=[hotCategoryModel.cateid intValue]+100;
         
         courseImage.tag = courseBtn.tag+10000;
